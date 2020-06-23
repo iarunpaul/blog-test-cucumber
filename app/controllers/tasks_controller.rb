@@ -12,7 +12,10 @@ class TasksController < ApplicationController
   def create
     @task = Task.new(task_params)
     @task.save!
-    redirect_to tasks_url
+    respond_to do |format|
+    	format.html  {redirect_to tasks_url}
+    	format.js
+    end
   end
 
   def update
@@ -23,13 +26,17 @@ class TasksController < ApplicationController
 
   def destroy
     @task = Task.destroy(params[:id])
-    redirect_to tasks_url
+     respond_to do |format|
+    	format.html  {redirect_to tasks_url}
+    	format.js
+    end
   end
+
 
   private
   	def task_params
 
-  		params.require(:task).permit(:name)
+  		params.require(:task).permit(:name, :complete)
 
   	end
 end
