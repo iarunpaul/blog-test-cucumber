@@ -12,8 +12,6 @@ When("Sean shouts {string}") do |message|
 	@message_from_sean = message
 
 end
-Then("Lucy hears Sean’s message") do
-
-	expect(@lucy.messages_heard).to include(@message_from_sean)
-
+Then("Lucy hears Sean's message") do
+  expect(@lucy.messages_heard).to include @message_from_sean
 end

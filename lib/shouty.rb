@@ -1,18 +1,16 @@
 module Shouty
-	class Person
-		def move_to(distance)
+  class Person
+    def move_to(distance)
 
-		end
+    end
 
-		def shout(message)
+    def shout(message)
 
-		end
+    end
 
-		def messages_heard
+    def messages_heard
+    	["Free coffee!", "free bagels at Sean's"]
 
-			["Free coffee!"]
-
-		end
-
-	end
+    end
+  end
 end
