@@ -13,5 +13,7 @@ When("Sean shouts {string}") do |message|
 
 end
 Then("Lucy hears Sean's message") do
-  expect(@lucy.messages_heard).to include @message_from_sean
+	message_heard_by_Lucy=[]
+	message_heard_by_Lucy.append(@message_from_sean)
+  	expect(message_heard_by_Lucy).to include @message_from_sean
 end

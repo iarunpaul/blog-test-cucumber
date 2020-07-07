@@ -1,6 +1,7 @@
 source 'https://rubygems.org'
 
 
+
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.0.0'
 # Use sqlite3 as the database for Active Record
@@ -36,15 +37,16 @@ group :test do
 	# database_cleaner is not required but highly recommended for cucumber
 	gem 'database_cleaner', '1.8.5'
 	# rspec gem
-	gem 'rspec', '3.5.0'
+	gem 'rspec'
 	# rspec-rails
-	gem 'rspec-rails', '3.5.0'
+	gem 'rspec-rails', '~> 4.0.0'
 	# webrat gem
 	gem 'webrat', '~> 0.7.3'
 
 end
 
 group :development do
+
   # Access an IRB console on exception pages or by using <%= console %> anywhere in the code.
   gem 'web-console'
   gem 'listen', '~> 3.0.5'
